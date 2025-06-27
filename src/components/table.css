@@ -1,0 +1,159 @@
+/* Container for responsiveness */
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 2rem; /* spacing from all sides */
+  box-sizing: border-box; /* includes padding inside width */
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; /* hides horizontal scroll bar if any */
+}
+
+
+/* Table Styling */
+table{
+    width:100%;
+
+}
+
+/* Table Cells */
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+
+
+    word-break: keep-all;      /* ❌ Don't break words */
+    overflow-wrap: break-word; /* ✅ Allow wrap only at spaces */
+}
+
+/* Row Color */
+table tr:nth-child(even) {
+  background-color: #454444;
+}
+
+table tr:hover {
+  background-color: #080808;
+}
+
+/* Table Header */
+table th {
+  padding: 12px 8px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+  font-size: 15px;
+}
+
+
+
+/* Delete Button */
+.delete-button {
+  background-color: #d9534f;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 10px 0;
+
+}
+
+.delete-button:hover {
+  background-color: #971712;
+}
+
+.delete-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+  color: black;
+  font-weight: 500;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1px;
+  }
+
+  .pagination button {
+    background-color: black;
+    color: white;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+.pagination button:hover {
+  background-color: #04AA6D;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  color: black;
+  cursor: not-allowed;
+}
+
+.pagination select,
+.pagination input {
+  padding: 4px;
+  font-size: 13px;
+  width: auto;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width:867px) {
+  table th,
+  table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .pagination {
+     flex-direction: column;
+
+
+   }
+
+  .delete-button {
+   display: flex;
+     flex-wrap: wrap;          /* ⭐️ This enables wrapping */
+     gap: 10px;                /* space between items */
+     justify-content: center; /* center content */
+     align-items: center;
+     margin-top: 20px;
+
+  }
+
+  .pagination button {
+    width: 30%;
+    margin: auto;
+  }
+  span , select{
+
+   margin: auto;
+  }
+  button,
+  .pagination button,
+  .delete-button,
+  .save-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+ .global_filter{
+  width : 103%;
+ }
+
+
+
+}
