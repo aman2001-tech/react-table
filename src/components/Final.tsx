@@ -218,25 +218,12 @@ export default function Final(): JSX.Element {
         <thead>
         {/* every headerGroup represent a row of headers
 
-                  {
-                    headers: [ // row
-                      { Header: "Name" },
-                      { Header: "Email" },
-                      { Header: "Role" }
-                    ]
-                }
-        +------------------ TABLE HEADER ------------------+
-        |   Name   |         Email        |     Role       |
-        +----------------------------------------------- → from headerGroup.headers[]
-
 */}
           {headerGroups.map((headerGroup: HeaderGroup<User>) => (
             <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
             {/* make tr for every row of headers and take attributes accordingly by getheadergropsprops()
                 <tr key="header_0">...</tr>*/}
-             {/*make th for every columns
-                 headerGroup.headers is an array of all columns in the current header row.
-                                     You're looping over each column to generate a <th> element*/}
+             {/*make th for every column*/}
               {headerGroup.headers.map((column: any) => (
                 <th
                 //{/*column.id is a unique identifier for each column.
