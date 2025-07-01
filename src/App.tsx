@@ -3,7 +3,7 @@
 // import SortingTable from './components/SortingTable';
 // import PaginationTable from './components/PaginationTable';
 // import RowSelection from './components/RowSelection';
-import Final from './components/Final';
+import Final from './components/FinalTask';
 
 import React from 'react';
 

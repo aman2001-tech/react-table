@@ -10,8 +10,8 @@ import {
   TableOptions,
   Row,
   TableState,
-  Column,
   HeaderGroup,
+  Column,
   Cell,
 } from 'react-table';
 
